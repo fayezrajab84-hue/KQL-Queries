@@ -1,0 +1,4 @@
+SentinelHealth
+//| where OperationName in ("Scheduled analytics rule run","NRT analytics rule run")
+| where Status in ("Failure","Warning")
+| summarize RunCount=count() by RuleName=SentinelResourceName,  Status, Reason, tostring(ExtendedProperties['Issues'][0]['Description']) 
