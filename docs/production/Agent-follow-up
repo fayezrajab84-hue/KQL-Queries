@@ -1,0 +1,2 @@
+Review from 2 hours before the URL click until the current evaluation time, capped at 24 hours after the click. Report any incomplete observation period.
+MVP: Recommend closure only after all related alerts and affected users are assessed, required telemetry is available, and no unresolved suspicious activity or response remains. Human approval is required before closure or remediation. Missing evidence requires analyst review.
