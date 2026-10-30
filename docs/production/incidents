@@ -1,0 +1,5 @@
+SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where IncidentNumber == 2637
+| summarize arg_max(TimeGenerated, *) by TenantId, IncidentName
+| project IncidentNumber, IncidentName, Title, CreatedTime, Status, AlertIds
